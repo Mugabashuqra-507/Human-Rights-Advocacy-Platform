@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wireframe Layout with Semicircle Shape</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff; /* Light blue background */
+            border: 10px solid #000; /* Black border */
+            padding: 20px;
+            height: 100vh; /* Full viewport height */
+            position: relative; /* Enable absolute positioning for elements */
+        }
+
+        header {
+            padding: 10px 0; /* Adjust padding for the header */
+        }
+
+       .navbar-container {
+            width: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-color: #f8f9fa;
+            border-bottom: 1px solid #ddd;
+            z-index: 1000;
+        }
+
+        .nav-link {
+            color: #333;
+            font-weight: bold;
+        }
+
+        .nav-link:hover {
+            text-decoration: none;
+            color: #007bff;
+        }
+		.logo {
+            float: left;
+            margin-bottom: 20px;
+        }
+
+        .semicircle-container {
+            position: absolute;
+            right: 0;
+            top: 50px; /* Position just below the horizontal rule */
+            bottom: 0;
+            width: 300px; /* Increase width for a larger semicircle */
+            overflow: hidden;
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .semicircle {
+            width: 100%;
+            height: 100%;
+            border-top-left-radius: 150%; /* Adjusted for a larger rounded edge */
+            border-bottom-left-radius: 150%; /* Adjusted for a larger rounded edge */
+            border: 2px solid #333; /* Dark border for the semicircle */
+            background-color: #87cefa; /* Sky blue color for the semicircle */
+            overflow: hidden;
+            display: flex;
+            align-items: flex-start; /* Align the image to the top */
+        }
+
+        .semicircle img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Fill the entire semicircle */
+        }
+
+        .mission-section,
+        .about-us-section {
+            margin-top: 20px;
+            padding-top: 20px;
+            background-color: #fff; /* White background for sections */
+            border-radius: 10px; /* Rounded corners */
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+        }
+
+        .mission-section h1,
+        .about-us-title {
+            color: #007bff; /* Blue heading color */
+            text-decoration: underline; /* Underline the heading */
+        }
+
+        .causes-list,
+        .info-text-box {
+            margin-top: 10px;
+            padding: 10px;
+            border: 1px solid #007bff; /* Border for the causes list */
+            border-radius: 5px; /* Rounded corners */
+            background-color: #f9f9f9; /* Light background for the causes list */
+        }
+
+        .button-row {
+            margin-top: 15px; /* Space between buttons */
+        }
+
+        .btn {
+            background-color: #007bff; /* Blue button background */
+            color: white;
+            border: none;
+            margin-right: 10px; /* Space between buttons */
+        }
+
+        .btn:hover {
+            background-color: #0056b3; /* Darker blue on hover */
+        }
+
+        .bottom-section {
+            margin-top: 15px; /* Space above bottom section */
+            display: flex;
+            justify-content: space-between; /* Distribute bottom boxes */
+        }
+
+        .bottom-box {
+            background-color: #f0f0f0; /* Light gray background */
+            padding: 10px;
+            border-radius: 5px;
+            width: 48%; /* Width of each box */
+        }
+
+        /* Styling for the search bar */
+        .search input {
+            border-color: #007bff; /* Blue border for input */
+        }
+
+        .search button {
+            background-color: #007bff; /* Blue button */
+            color: white;
+        }
+
+        .search button:hover {
+            background-color: #0056b3; /* Darker blue on hover */
+        }
+    </style>
+</head>
+
+<body>
+
+   	<div class="navbar-container">
+        <header class="container-fluid">
+            <div class="row align-items-center">
+                <svg width="60" height="30" viewBox="0 0 60 30">
+                    <path d="M 10,0 Q 0,15 10,30 L 50,30 Q 40,15 50,0 Z" style="fill:#ddd;stroke:#000;stroke-width:1" />
+                    <text x="18" y="20" font-family="Arial" font-size="12" fill="black">Logo</text>
+                </svg>
+
+                <div class="col-md-6">
+                    <nav>
+                        <ul class="nav justify-content-center">
+                            <li class="nav-item"><a href="home.html" class="nav-link">Home</a></li>
+                            <li class="nav-item"><a href="login.html" class="nav-link">Login</a></li>
+                            <li class="nav-item"><a href="aboutus.html" class="nav-link">About</a></li>
+                            <li class="nav-item"><a href="causes.html" class="nav-link">Causes</a></li>
+                            <li class="nav-item"><a href="images.html" class="nav-link">Gallery</a></li>
+                            <li class="nav-item"><a href="volunteer.html" class="nav-link">Volunteer</a></li>
+                            <li class="nav-item"><a href="cup.html" class="nav-link">Contact</a></li>
+                            <li class="nav-item"><a href="donation.html" class="nav-link">Donate</a></li>
+                        </ul>
+                    </nav>
+                </div>
+
+                <div class="col-md-4 d-flex justify-content-end align-items-center">
+                    <div class="search input-group">
+                        <input type="text" class="form-control" placeholder="Enter your search">
+                        <div class="input-group-append">
+                            <button class="btn btn-outline-secondary">&#128269;</button>
+                        </div>
+                    </div>
+                    <div class="login-icon ml-3">&#128100;</div>
+                </div>
+            </div>
+        </header>
+    </div>
+
+    <main class="container mt-5">
+
+        <!-- About Us Section -->
+        <div class="container about-us-section">
+            <div class="row">
+                <div class="col-md-8 left-column">
+                    <h2 class="about-us-title">About Us</h2>
+                    <div class="info-text-box">
+                        <p>We are a dedicated organization fighting for human rights across the globe. Our mission is to ensure that every individual enjoys fundamental rights and freedoms, regardless of their background, beliefs, or status. We believe in equality, justice, and dignity for all.</p>
+                    </div>
+                    <div class="button-row">
+                        <button class="btn">Our Mission</button>
+                        <button class="btn">Values</button>
+                        <button class="btn">History</button>
+                    </div><hr>
+                    <div class="bottom-section">
+                        <div class="bottom-box">
+                            <h4>Our Mission</h4>
+                            <p>To promote and protect human rights for all individuals, advocating for justice, equality, and the right to live free from discrimination and violence.</p>
+                        </div>
+                        <div class="bottom-box">
+                            <h4>Our Values</h4>
+                            <p>We uphold the values of respect, inclusivity, integrity, and compassion, fostering a culture of empathy and support for the most vulnerable in society.</p>
+                        </div>
+                        <div class="bottom-box">
+                            <h4>History</h4>
+                            <p>Founded in 2000, our organization has tirelessly worked to address human rights violations, raising awareness and mobilizing communities to stand against injustice.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 right-column">
+                    <!-- Semicircular shape with image -->
+                    <div class="semicircle-shape"></div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Semicircle Image Container -->
+    <div class="semicircle-container">
+        <div class="semicircle">
+            <img src="pro1.jpg" alt="Your Image Description">
+        </div>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>

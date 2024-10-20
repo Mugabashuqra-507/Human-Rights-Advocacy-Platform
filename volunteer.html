@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Volunteer Sign-Up</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="volunteer.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding-top: 60px; /* Space for the fixed navbar */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+        }
+
+        .navbar-container {
+            width: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-color: #f8f9fa;
+            border-bottom: 1px solid #ddd;
+            z-index: 1000;
+        }
+
+        .nav-link {
+            color: #333;
+            font-weight: bold;
+        }
+
+        .nav-link:hover {
+            text-decoration: none;
+            color: #007bff;
+        }
+
+        .login-icon {
+            font-size: 20px;
+            color: #007bff;
+        }
+
+        .container {
+            display: flex;
+            background: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 800px;
+        }
+
+        .image-section {
+            margin-right: 20px;
+            position: relative;
+            width: 50%;
+            height: auto;
+        }
+
+        .semicircle-shape {
+            width: 100%;
+            height: 100%;
+            border-top-right-radius: 300px;
+            border-bottom-right-radius: 300px;
+            border: 2px solid #333;
+            background-color: #87cefa;
+            position: absolute;
+            top: 0;
+            left: 0;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .semicircle-shape img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .form-section {
+            width: 50%;
+        }
+
+        .form-section h2 {
+            margin-bottom: 20px;
+        }
+
+        .form-section label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .form-section input[type="text"],
+        .form-section textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .form-section button {
+            float: right;
+            padding: 10px 20px;
+            background-color: #28a745;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .form-section button:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="navbar-container">
+        <header class="container-fluid">
+            <div class="row align-items-center">
+                <svg width="60" height="30" viewBox="0 0 60 30">
+                    <path d="M 10,0 Q 0,15 10,30 L 50,30 Q 40,15 50,0 Z" style="fill:#ddd;stroke:#000;stroke-width:1" />
+                    <text x="18" y="20" font-family="Arial" font-size="12" fill="black">Logo</text>
+                </svg>
+
+                <div class="col-md-6">
+                    <nav>
+                        <ul class="nav justify-content-center">
+                            <li class="nav-item"><a href="home.html" class="nav-link">Home</a></li>
+                            <li class="nav-item"><a href="login.html" class="nav-link">Login</a></li>
+                            <li class="nav-item"><a href="aboutus.html" class="nav-link">About</a></li>
+                            <li class="nav-item"><a href="causes.html" class="nav-link">Causes</a></li>
+                            <li class="nav-item"><a href="images.html" class="nav-link">Gallery</a></li>
+                            <li class="nav-item"><a href="volunteer.html" class="nav-link">Volunteer</a></li>
+                            <li class="nav-item"><a href="cup.html" class="nav-link">Contact</a></li>
+                            <li class="nav-item"><a href="donation.html" class="nav-link">Donate</a></li>
+                        </ul>
+                    </nav>
+                </div>
+
+                <div class="col-md-4 d-flex justify-content-end align-items-center">
+                    <div class="search input-group">
+                        <input type="text" class="form-control" placeholder="Enter your search">
+                        <div class="input-group-append">
+                            <button class="btn btn-outline-secondary">&#128269;</button>
+                        </div>
+                    </div>
+                    <div class="login-icon ml-3">&#128100;</div>
+                </div>
+            </div>
+        </header>
+    </div>
+
+    <div class="container">
+        <div class="image-section">
+            <div class="semicircle-shape">
+                <img src="pro1.jpg" alt="Image inside semicircle">
+            </div>
+        </div>
+        <div class="form-section">
+            <h2>Be A Volunteer</h2>
+            <form id="volunteer-form">
+                <input type="text" id="name" name="name" required placeholder="Your name">
+                <input type="text" id="email" name="email" required placeholder="Your email">
+                <textarea id="message" name="message" required placeholder="Message"></textarea>
+                <button type="submit">GO</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+    <script src="volunteer.js"></script> 
+</body>
+
+</html>

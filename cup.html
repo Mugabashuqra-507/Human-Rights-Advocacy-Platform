@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        body {
+            background-color: #f8f9fa;
+            color: #343a40;
+            padding-top: 70px; /* Space for the fixed navbar */
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        td {
+            border: 2px solid #ccc;
+            padding: 15px;
+            text-align: center;
+            vertical-align: top;
+            background-color: #ffffff;
+        }
+
+		.navbar-container {
+            width: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-color: #f8f9fa;
+            border-bottom: 1px solid #ddd;
+            z-index: 1000;
+        }
+
+        .nav-link {
+            color: #333;
+            font-weight: bold;
+        }
+
+        .nav-link:hover {
+            text-decoration: none;
+            color: #007bff;
+        }
+		.logo {
+            float: left;
+            margin-bottom: 20px;
+        }
+
+        .image-container {
+            height: 200px;
+            background-color: #e9ecef;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .image-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .list-square {
+            list-style-type: none;
+            padding-left: 0;
+            text-align: left;
+        }
+
+        .list-square li {
+            display: flex;
+            align-items: center;
+        }
+
+        .list-square li i {
+            margin-right: 10px;
+            color: #007bff;
+        }
+
+        .list-container {
+            border: 2px solid #007bff;
+            padding: 10px;
+            border-radius: 5px;
+            margin-top: 10px;
+            text-align: left;
+            background-color: #ffffff;
+        }
+
+        h5 {
+            color: #007bff;
+        }
+
+        .search {
+            margin-left: auto; /* Push the search bar to the right */
+            display: flex; /* Ensure search bar elements are in a row */
+            align-items: center;
+        }
+
+        .search input {
+            width: 250px;
+        }
+
+        .login-icon {
+            margin-left: 15px; /* Space between search and login icon */
+            font-size: 1.5rem; /* Adjust size for better visibility */
+        }
+    </style>
+</head>
+
+<body>
+	<div class="navbar-container">
+        <header class="container-fluid">
+            <div class="row align-items-center">
+                <svg width="60" height="30" viewBox="0 0 60 30">
+                    <path d="M 10,0 Q 0,15 10,30 L 50,30 Q 40,15 50,0 Z" style="fill:#ddd;stroke:#000;stroke-width:1" />
+                    <text x="18" y="20" font-family="Arial" font-size="12" fill="black">Logo</text>
+                </svg>
+
+                <div class="col-md-6">
+                    <nav>
+                        <ul class="nav justify-content-center">
+                            <li class="nav-item"><a href="home.html" class="nav-link">Home</a></li>
+                            <li class="nav-item"><a href="login.html" class="nav-link">Login</a></li>
+                            <li class="nav-item"><a href="aboutus.html" class="nav-link">About</a></li>
+                            <li class="nav-item"><a href="causes.html" class="nav-link">Causes</a></li>
+                            <li class="nav-item"><a href="images.html" class="nav-link">Gallery</a></li>
+                            <li class="nav-item"><a href="volunteer.html" class="nav-link">Volunteer</a></li>
+                            <li class="nav-item"><a href="cup.html" class="nav-link">Contact</a></li>
+                            <li class="nav-item"><a href="donation.html" class="nav-link">Donate</a></li>
+                        </ul>
+                    </nav>
+                </div>
+
+                <div class="col-md-4 d-flex justify-content-end align-items-center">
+                    <div class="search input-group">
+                        <input type="text" class="form-control" placeholder="Enter your search">
+                        <div class="input-group-append">
+                            <button class="btn btn-outline-secondary">&#128269;</button>
+                        </div>
+                    </div>
+                    <div class="login-icon ml-3">&#128100;</div>
+                </div>
+            </div>
+        </header>
+    </div>
+
+    <div class="container-fluid">
+        <table>
+            <tr>
+                <td>
+                    <h5>Contact Us</h5>
+                    <br><br>
+                    <ul class="list-square">
+                        <li><i class="fas fa-envelope"></i>Email: contact@example.com</li>
+                        <li><i class="fas fa-phone"></i>Phone: (123) 456-7890</li>
+                        <li><i class="fas fa-map-marker-alt"></i>Address: 123 Main St, City, Country</li>
+                        <li><i class="fas fa-globe"></i>Website: www.example.com</li>
+                    </ul>
+                </td>
+                <td>
+                    <div class="image-container">
+                        <img src="pro14.png" alt="Image">
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="image-container">
+                        <img src="pro11.jpg" alt="Image">
+                    </div>
+                </td>
+                <td>
+                    <h5>Meet Us</h5>
+                    <div class="list-container">
+                        <ul class="list-square mt-2">
+                            <li>Follow us on social media</li>
+                            <li>Join our community events</li>
+                            <li>Subscribe to our newsletter</li>
+                        </ul>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>
